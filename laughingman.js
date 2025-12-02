@@ -19,6 +19,14 @@ for(let i = 0; i<SQUARE_COUNT;i++){
     square.className = 'square';
     box.appendChild(square);
     //add it to the screen
+   
+   //5. mouse over orochimaru mouse out laughing man
+    square.addEventListener('mouseover', e => {
+        square.src = 'Orochimaru.jpg';
+    });
+    square.addEventListener('mouseout', e => {
+        square.src = 'laughing_man.jpg';
+    });
 }
 
 let allSquares = box.children;
@@ -41,6 +49,11 @@ squareArray.forEach(function(element, index) {
         element.style.top = (currentTop + dy) + "px";
     }, TIMER_SPEED);
 
+    //#6 mouseing over square changes color
+squareElement.addEventListener('mouseover', e => {
+    squareElement.style.backgroundColor = getRandomColor();
+    });
+    
     });
 });
 function getRandomColor() {
