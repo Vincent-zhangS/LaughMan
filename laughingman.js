@@ -11,9 +11,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     let box = document.querySelector("#box");
 
+//#2 set all squares to laughing man (done in class)
 for(let i = 0; i<SQUARE_COUNT;i++){
     //create the square
     let square = document.createElement('img');
+
+    //#3 set to laughing man (done in class)
     square.src = 'laughing_man.jpg';
     square.alt = 'Catch the Laughing Man!';
     square.className = 'square';
@@ -37,6 +40,8 @@ squareArray.forEach(function(element, index) {
     setInterval(() => {
         let currentLeft = parseInt(element.style.left) || 225;
         let currentTop = parseInt(element.style.top) || 175;
+      
+      //#4 border changes color (done in class)
         if (currentLeft >= 450 || currentLeft <= 0) {
             dx *= -1;
             element.style.borderColor = getRandomColor();
