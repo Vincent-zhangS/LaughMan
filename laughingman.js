@@ -1,5 +1,5 @@
-var SQUARE_COUNT = 3;
-const SPEED = 5;
+var SQUARE_COUNT = 4;
+const SPEED = 10;
 const TIMER_SPEED = 100;
 
 document.addEventListener("DOMContentLoaded", ()=>{
